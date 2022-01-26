@@ -1,4 +1,6 @@
 """
+Megoldatlan: 1-32
+
 Balu által megoldott:
 Gábor által megoldott:
 Niki által megoldott:
