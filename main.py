@@ -7,7 +7,7 @@ class Tanulo:
 	lista = []
 	def __init__(self, tkod, dnev, mVt, acs, masodik, no, egylakok, testver):
 		self.tanulokod=tkod
-		self.diaknev=dnev
+		self.nev=dnev
 		self.mVt=mVt
 		self.angolcs=acs
 		self.mnyelv=masodik
