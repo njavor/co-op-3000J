@@ -3,56 +3,23 @@ Megoldatlan: 1-32
 Megoldott: -
 """
 
-class Osztaly:
-	def __init__(self, **kwargs):
-		self.tanulokod=kwargs["tkod"]
-		self.diaknev=kwargs["dnev"]
-		self.mVt=kwargs["mVt"]
-		self.angolcs=kwargs["acs"]
-		self.mnyelv=kwargs["mnyelv"]
-		self.nem=kwargs["no"]
-		self.csalad=kwargs["csalad"]
-		self.testverek=kwargs["test"]
+class Tanulo:
+	lista = []
+	def __init__(self, tkod, dnev, mVt, acs, masodik, no, egylakok, testver):
+		self.tanulokod=tkod
+		self.diaknev=dnev
+		self.mVt=mVt
+		self.angolcs=acs
+		self.mnyelv=masodik
+		self.nem=no
+		self.egyuttlakok=egylakok
+		self.testverek=testver
+		Tanulo.lista.append(self)
 
-"""
-from _1 import egy
-from _2 import ketto
-from _3 import harom
-from _4 import negy
-from _5 import ot
-from _6 import hat
-from _7 import het
-from _8 import nyolc
-from _9 import kilenc
-from _10 import tiz
-from _11 import tizenegy
-from _12 import tizenketto
-from _13 import tizenharom
-from _14 import tizennegy
-from _15 import tizenot
-from _16 import tizenhat
-from _17 import tizenhet
-from _18 import tizennyolc
-from _19 import tizenkilenc
-from _20 import husz
-from _21 import huszonegy
-from _22 import huszonketto
-from _23 import huszonharom
-from _24 import huszonnegy
-from _25 import huszonot
-from _26 import huszonhat
-from _27 import huszonhet
-from _28 import huszonnyolc
-from _29 import huszonkilenc
-from _30 import harminc
-from _31 import harmincegy
-from _32 import harmincketto
-"""
-
-lista = []
 with open("input.txt","r",encoding="utf8") as f:
 	for sor in f:
-		lista.append(Osztaly(sor.split(';'))
+		s = sor.strip().split(";")
+		t = Tanulo(int(s[0]), s[1], s[2], s[3], s[4], s[5], int(s[6]), int(s[7]))
 
 """
 print("1) Hány diák tanul az osztályban?")
