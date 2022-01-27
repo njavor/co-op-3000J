@@ -1,5 +1,6 @@
 """
 Megoldatlan: 1-32
+Megoldott: -
 """
 
 from _1 import egy
