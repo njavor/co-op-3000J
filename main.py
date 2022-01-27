@@ -3,6 +3,18 @@ Megoldatlan: 1-32
 Megoldott: -
 """
 
+class Osztaly:
+	def __init__(self, **kwargs):
+		self.tanulokod=kwargs["tkod"]
+		self.diaknev=kwargs["dnev"]
+		self.mVt=kwargs["mVt"]
+		self.angolcs=kwargs["acs"]
+		self.mnyelv=kwargs["mnyelv"]
+		self.nem=kwargs["no"]
+		self.csalad=kwargs["csalad"]
+		self.testverek=kwargs["test"]
+
+"""
 from _1 import egy
 from _2 import ketto
 from _3 import harom
@@ -35,12 +47,14 @@ from _29 import huszonkilenc
 from _30 import harminc
 from _31 import harmincegy
 from _32 import harmincketto
+"""
 
 lista = []
 with open("input.txt","r",encoding="utf8") as f:
 	for sor in f:
-		lista.append(int(sor))
+		lista.append(Osztaly(sor.split(';'))
 
+"""
 print("1) Hány diák tanul az osztályban?")
 print("2) Hány fiú tanul az osztályban?")
 print("3) Hány lány tanul az osztályban?")
@@ -73,3 +87,4 @@ print("29) Citad Ella hiányzott a legutóbbi angol órán, szeretné bepótolni
 print("30) Hát Izsák hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
 print("31) A spanyol vagy a német nyelvet tanulják-e többben az osztáyban?")
 print("32) Kérjen be a felhasználótól egy nyelvet és írja ki, az adott nyelvet tanulók névsorát!")
+"""
