@@ -3,6 +3,8 @@ Megoldatlan: 1-32
 Megoldott: -
 """
 
+import jniki
+
 class Tanulo:
 	lista = []
 	def __init__(self, tkod, dnev, mVt, acs, masodik, no, egylakok, testver):
