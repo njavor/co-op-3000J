@@ -49,3 +49,9 @@ for tanulo in Tanulo.lista:
     if(tanulo.testverek > 1):
         print(tanulo.nev)
 
+print("8) Hány olyan diák van, akik a 2. idegen nyelvként a németet tanulják!")
+németesek = 0
+for tanulo in Tanulo.lista:  
+    if(tanulo.mnyelv > "német"):
+        németesek+= 1
+print(f"{németesek} németes diák tanul az osztályban!")
