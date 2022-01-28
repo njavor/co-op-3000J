@@ -1,4 +1,5 @@
 from cmath import tan
+from email import charset
 import imp
 from main import Tanulo
 
@@ -61,4 +62,10 @@ print("9) Gyűjtse ki azon fiú diákok nevét, akik a 2. idegen nyelvként a n�
 for tanulo in Tanulo.lista:  
     if(tanulo.mnyelv > "német" and tanulo.nem == "F"):
         print(tanulo.nev)
-        
+
+print("10) Hány diák tanul, az egyes angol csoportban?")
+egyesangolosok = 0
+for tanulo in Tanulo.lista:
+    if(tanulo.angolcs[0:2] == "1."):
+        egyesangolosok+= 1
+print(f"{egyesangolosok} egyes angol diák tanul az osztályban!")

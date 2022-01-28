@@ -1,6 +1,6 @@
 """
 Megoldatlan: 1-32
-Megoldott: 9
+Megoldott: 10
 """
 
 class Tanulo:
@@ -17,7 +17,6 @@ class Tanulo:
 		Tanulo.lista.append(self)
 
 """
-print("10) Hány diák tanul, az egyes angol csoportban?")
 print("11) Hány diák tanul, a kettes angol csoportban?")
 print("12) Hány diák tanul, az alfa matematika csoportban?")
 print("13) Hány diák tanul, az beta matematika csoportban?")
