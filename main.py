@@ -1,6 +1,6 @@
 """
 Megoldatlan: 1-32
-Megoldott: -
+Megoldott: 4
 """
 
 class Tanulo:
@@ -16,15 +16,7 @@ class Tanulo:
 		self.testverek=testver
 		Tanulo.lista.append(self)
 
-with open("input.txt","r",encoding="utf8") as f:
-	for sor in f:
-		s = sor.strip().split(";")
-		t = Tanulo(int(s[0]), s[1], s[2], s[3], s[4], s[5], int(s[6]), int(s[7]))
-
-
 """
-print("4) Hány olyan diák van, akiknek több mint 1 testvére van!")
-print("5) Gyűjtse ki azon diákok nevét, akiknek több mint 1 testvérük van!")
 print("6) Hány olyan diák van, akiknek több mint 2 testvére van!")
 print("7) Gyűjtse ki azon diákok nevét, akiknek több mint 2 testvérük van!")
 print("8) Hány olyan diák van, akik a 2. idegen nyelvként a németet tanulják!")
