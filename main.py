@@ -23,8 +23,6 @@ with open("input.txt","r",encoding="utf8") as f:
 
 
 """
-print("2) Hány fiú tanul az osztályban?")
-print("3) Hány lány tanul az osztályban?")
 print("4) Hány olyan diák van, akiknek több mint 1 testvére van!")
 print("5) Gyűjtse ki azon diákok nevét, akiknek több mint 1 testvérük van!")
 print("6) Hány olyan diák van, akiknek több mint 2 testvére van!")
