@@ -21,3 +21,4 @@ with open("input.txt","r",encoding="utf8") as f:
 	for sor in f:
 		s = sor.strip().split(";")
 		t = Tanulo(int(s[0]), s[1], s[2], s[3], s[4], s[5], int(s[6]), int(s[7]))
+		
