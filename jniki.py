@@ -1,5 +1,13 @@
 from main import Tanulo
 
+def Hianyzott(nev):
+    i = 0
+    while not Tanulo.lista[i].nev == nev:
+        i+=1
+    for elem in Tanulo.lista:
+        if not elem.nev == nev and Tanulo.lista[i].angolcs == elem.angolcs:
+            print(elem.nev)
+
 print("21) Mekkora a legnagyobb család az osztályban?")
 legnagyobb = Tanulo.lista[0].egyuttlakok
 for elem in Tanulo.lista:
@@ -34,28 +42,15 @@ for elem in Tanulo.lista:
 print(res)        
 
 print("26) Dári Dóra hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
-i = 0
-while not Tanulo.lista[i].nev == "Dári Dóra":
-    i+=1
-for elem in Tanulo.lista:
-    if not elem.nev == "Dári Dóra" and Tanulo.lista[i].angolcs == elem.angolcs:
-        print(elem.nev)
+Hianyzott("Dári Dóra")
 
 print("27) Avon Mór hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak. ")
-i = 0
-while not Tanulo.lista[i].nev == "Avon Mór":
-    i+=1
-for elem in Tanulo.lista:
-    if not elem.nev == "Avon Mór" and Tanulo.lista[i].angolcs == elem.angolcs:
-        print(elem.nev)
+Hianyzott("Avon Mór")
 
 print("28) Zúz Mara hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak. ")
-i = 0
-while not Tanulo.lista[i].nev == "Zúz Mara":
-    i+=1
-for elem in Tanulo.lista:
-    if not elem.nev == "Zúz Mara" and Tanulo.lista[i].angolcs == elem.angolcs:
-        print(elem.nev)
-        
+Hianyzott("Zúz Mara")
+
 print("29) Citad Ella hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
+Hianyzott("Citad Ella")
+
 print("30) Hát Izsák hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
