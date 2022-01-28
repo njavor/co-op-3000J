@@ -1,72 +1,88 @@
 from main import Tanulo
 
-def Hianyzott(nev):
+def F21():
+    legnagyobb = Tanulo.lista[0].egyuttlakok
+    for elem in Tanulo.lista:
+        if legnagyobb < elem.egyuttlakok:
+            legnagyobb = elem.egyuttlakok
+    print(legnagyobb)
+    
+def F22():
+    legnev = Tanulo.lista[0].nev
+    legnagyobb = Tanulo.lista[0].egyuttlakok
+    for elem in Tanulo.lista:
+        if legnagyobb < elem.egyuttlakok:
+            legnagyobb = elem.egyuttlakok
+            legnev = elem.nev
+    print(legnev)    
+
+def F23_24(nem, elso, masodik):
+    for elem in Tanulo.lista:
+        if elem.nem == nem and (elem.angolcs == elso or elem.angolcs == masodik):
+            print(elem.nev)
+
+def F25():
+    res = 0
+    for elem in Tanulo.lista:
+        if not elem.egyuttlakok - elem.testverek == (3 or -3):
+            res+=1
+    print(res)            
+
+def F26_30(nev):
     i = 0
     while not Tanulo.lista[i].nev == nev:
         i+=1
     for elem in Tanulo.lista:
         if not elem.nev == nev and Tanulo.lista[i].angolcs == elem.angolcs:
-            print(elem.nev)            
+            print(elem.nev)
+
+def F31():
+    sVn = 0
+    for elem in Tanulo.lista:
+        if elem.mnyelv == "német":
+            sVn+=1
+        if elem.mnyelv == "spanyol":
+            sVn-=1
+    print("Spanyolt tanulnak többen" if sVn>0 else "Németet tanulnak többen" if sVn<0 else "Ugyanannyian tanulnak spanyolt és németet")
+
+def F32(input):
+    for elem in Tanulo.lista:
+        if elem.mnyelv == input:
+            print(elem.nev)                    
+
 
 print("21) Mekkora a legnagyobb család az osztályban?")
-legnagyobb = Tanulo.lista[0].egyuttlakok
-for elem in Tanulo.lista:
-    if legnagyobb < elem.egyuttlakok:
-        legnagyobb = elem.egyuttlakok
-print(legnagyobb)
+F21()
 
 print("22) Írjuk ki az egyik olyan diák nevét akinek e legtöbb testvére van!")
-legnev = Tanulo.lista[0].nev
-legnagyobb = Tanulo.lista[0].egyuttlakok
-for elem in Tanulo.lista:
-    if legnagyobb < elem.egyuttlakok:
-        legnagyobb = elem.egyuttlakok
-        legnev = elem.nev
-print(legnev)
+F22()
 
 print("23) Gyűjtse ki azon lány diákok nevét, akik az egyes vagy kettes angol csoportban vannak!")
-for elem in Tanulo.lista:
-    if elem.nem == "L" and (elem.angolcs == "1. Sió" or elem.angolcs == "2. Bán"):
-        print(elem.nev)
+F23_24("L","1. Sió","2. Bán")
 
 print("24) Gyűjtse ki azon fiú diákok nevét, akik a hármas vagy négyes angol csoportban vannak és 0 vagy 2 testvérük van!")
-for elem in Tanulo.lista:
-    if elem.nem == "F" and (elem.angolcs == "3. Joó" or elem.angolcs == "4. Kis"):
-        print(elem.nev)
+F23_24("F","3. Joó","4. Kis")
 
 print("25) Viszonylag kevés azon családok száma, ahol az együttlakók száma és a testvérek száma között nem három a különbség. Adja meg a számukat!")
-res = 0
-for elem in Tanulo.lista:
-    if not elem.egyuttlakok - elem.testverek == (3 or -3):
-        res+=1
-print(res)        
+F25()  
 
 print("26) Dári Dóra hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
-Hianyzott("Dári Dóra")
+F26_30("Dári Dóra")
 
 print("27) Avon Mór hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak. ")
-Hianyzott("Avon Mór")
+F26_30("Avon Mór")
 
 print("28) Zúz Mara hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak. ")
-Hianyzott("Zúz Mara")
+F26_30("Zúz Mara")
 
 print("29) Citad Ella hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
-Hianyzott("Citad Ella")
+F26_30("Citad Ella")
 
 print("30) Hát Izsák hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
-Hianyzott("Hát Izsák")
+F26_30("Hát Izsák")
 
 print("31) A spanyol vagy a német nyelvet tanulják-e többben az osztáyban?")
-sVn = 0
-for elem in Tanulo.lista:
-    if elem.mnyelv == "német":
-        sVn+=1
-    if elem.mnyelv == "spanyol":
-        sVn-=1
-print("Spanyolt tanulnak többen" if sVn>0 else "Németet tanulnak többen" if sVn<0 else "Ugyanannyian tanulnak spanyolt és németet")        
+F31()       
 
 print("32) Kérjen be a felhasználótól egy nyelvet és írja ki, az adott nyelvet tanulók névsorát!")
-nyelv = input("Melyik második nyelvre vagy kíváncsi?  :  ")
-for elem in Tanulo.lista:
-    if elem.mnyelv == nyelv:
-        print(elem.nev)
+F32(input("Melyik második nyelvre vagy kíváncsi?  :  "))
