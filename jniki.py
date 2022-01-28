@@ -50,5 +50,12 @@ for elem in Tanulo.lista:
         print(elem.nev)
 
 print("28) Zúz Mara hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak. ")
+i = 0
+while not Tanulo.lista[i].nev == "Zúz Mara":
+    i+=1
+for elem in Tanulo.lista:
+    if not elem.nev == "Zúz Mara" and Tanulo.lista[i].angolcs == elem.angolcs:
+        print(elem.nev)
+        
 print("29) Citad Ella hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
 print("30) Hát Izsák hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
