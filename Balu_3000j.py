@@ -36,3 +36,10 @@ for tanulo in Tanulo.lista:
     if(tanulo.testverek > 1):
         többtestveresek+= 1
 print(f"{többtestveresek} több testvérrel rendelkező diák tanul az osztályban!")
+
+print("6) Hány olyan diák van, akiknek több mint 2 testvére van!")
+kettőnéltöbbtestveresek = 0
+for tanulo in Tanulo.lista:  
+    if(tanulo.testverek > 1):
+        kettőnéltöbbtestveresek+= 1
+print(f"{kettőnéltöbbtestveresek} kettőnél több testvérrel rendelkező diák tanul az osztályban!")
