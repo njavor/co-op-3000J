@@ -66,3 +66,7 @@ for elem in Tanulo.lista:
 print("Spanyolt tanulnak többen" if sVn>0 else "Németet tanulnak többen" if sVn<0 else "Ugyanannyian tanulnak spanyolt és németet")        
 
 print("32) Kérjen be a felhasználótól egy nyelvet és írja ki, az adott nyelvet tanulók névsorát!")
+nyelv = input("Melyik második nyelvre vagy kíváncsi?  :  ")
+for elem in Tanulo.lista:
+    if elem.mnyelv == nyelv:
+        print(elem.nev)
