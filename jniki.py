@@ -6,7 +6,7 @@ def Hianyzott(nev):
         i+=1
     for elem in Tanulo.lista:
         if not elem.nev == nev and Tanulo.lista[i].angolcs == elem.angolcs:
-            print(elem.nev)
+            print(elem.nev)            
 
 print("21) Mekkora a legnagyobb család az osztályban?")
 legnagyobb = Tanulo.lista[0].egyuttlakok
@@ -54,3 +54,15 @@ print("29) Citad Ella hiányzott a legutóbbi angol órán, szeretné bepótolni
 Hianyzott("Citad Ella")
 
 print("30) Hát Izsák hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
+Hianyzott("Hát Izsák")
+
+print("31) A spanyol vagy a német nyelvet tanulják-e többben az osztáyban?")
+sVn = 0
+for elem in Tanulo.lista:
+    if elem.mnyelv == "német":
+        sVn+=1
+    if elem.mnyelv == "spanyol":
+        sVn-=1
+print("Spanyolt tanulnak többen" if sVn>0 else "Németet tanulnak többen" if sVn<0 else "Ugyanannyian tanulnak spanyolt és németet")        
+
+print("32) Kérjen be a felhasználótól egy nyelvet és írja ki, az adott nyelvet tanulók névsorát!")
