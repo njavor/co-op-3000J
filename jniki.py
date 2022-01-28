@@ -25,7 +25,14 @@ print("24) Gyűjtse ki azon fiú diákok nevét, akik a hármas vagy négyes ang
 for elem in Tanulo.lista:
     if elem.nem == "F" and (elem.angolcs == "3. Joó" or elem.angolcs == "4. Kis"):
         print(elem.nev)
+
 print("25) Viszonylag kevés azon családok száma, ahol az együttlakók száma és a testvérek száma között nem három a különbség. Adja meg a számukat!")
+res = 0
+for elem in Tanulo.lista:
+    if not elem.egyuttlakok - elem.testverek == (3 or -3):
+        res+=1
+print(res)        
+
 print("26) Dári Dóra hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak.")
 print("27) Avon Mór hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak. ")
 print("28) Zúz Mara hiányzott a legutóbbi angol órán, szeretné bepótolni a hiányzást. Adja meg azon tanulók nevét, akik vele azonos angol csoportba járnak. ")
