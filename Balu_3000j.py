@@ -29,3 +29,10 @@ for tanulo in Tanulo.lista:
     if(tanulo.testverek == 1):
         egytestveresek+= 1
 print(f"{egytestveresek} egy testvérrel rendelkező diák tanul az osztályban!")
+
+print("5) Gyűjtse ki azon diákok nevét, akiknek több mint 1 testvérük van!")
+többtestveresek = 0
+for tanulo in Tanulo.lista:  
+    if(tanulo.testverek > 1):
+        többtestveresek+= 1
+print(f"{többtestveresek} több testvérrel rendelkező diák tanul az osztályban!")
