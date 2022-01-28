@@ -1,6 +1,6 @@
 """
 Megoldatlan: 1-32
-Megoldott: 8
+Megoldott: 9
 """
 
 class Tanulo:
@@ -17,7 +17,6 @@ class Tanulo:
 		Tanulo.lista.append(self)
 
 """
-print("9) Gyűjtse ki azon fiú diákok nevét, akik a 2. idegen nyelvként a németet tanulják!")
 print("10) Hány diák tanul, az egyes angol csoportban?")
 print("11) Hány diák tanul, a kettes angol csoportban?")
 print("12) Hány diák tanul, az alfa matematika csoportban?")

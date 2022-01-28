@@ -1,3 +1,4 @@
+from cmath import tan
 import imp
 from main import Tanulo
 
@@ -55,3 +56,9 @@ for tanulo in Tanulo.lista:
     if(tanulo.mnyelv > "német"):
         németesek+= 1
 print(f"{németesek} németes diák tanul az osztályban!")
+
+print("9) Gyűjtse ki azon fiú diákok nevét, akik a 2. idegen nyelvként a németet tanulják!")
+for tanulo in Tanulo.lista:  
+    if(tanulo.mnyelv > "német" and tanulo.nem == "F"):
+        print(tanulo.nev)
+        
